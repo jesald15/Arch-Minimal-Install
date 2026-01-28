@@ -1,4 +1,4 @@
-#STEP0: Arch Install
+#STEP0: ESTABLISHING A WIFI CONNECTION
 1. Prompt specified for wifi
 ```
 iwctl
@@ -16,9 +16,15 @@ iwctl --passpharse "Type your wifi password" station wlan0 connect "Type your SS
 ```
 ping archlinus.org (or any website) 
 ```
+# STEP1: Arch Install
+Just type:
+
+```
+archinstall
+```
 ---
 
-# i3 Dotfiles Setup and Overview
+# i3WM Dot files
 
 This README provides an overview of the i3 configuration setup, required applications, and all updated keyboard shortcuts.
 
