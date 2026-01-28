@@ -8,6 +8,7 @@ iwctl
 station wlan0 get-networks
 ```
 After that type `exit` 
+
 3. Connect to wifi
 ```
 iwctl --passpharse "Type your wifi password" station wlan0 connect "Type your SSID"
