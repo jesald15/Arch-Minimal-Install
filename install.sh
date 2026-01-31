@@ -20,12 +20,13 @@ kitty dmenu dex \
 xss-lock i3lock \
 networkmanager nm-applet \
 brightnessctl playerctl lm_sensors \
-feh flameshot xorg-xinput \
+thunar xorg-xinput \
 blueman usbutils \
 firefox \
 wine wine-mono wine-gecko winetricks \
 telegram-desktop deltachat-desktop \
 neovim nano
+
 
 # Enable NetworkManager
 sudo systemctl enable --now NetworkManager
