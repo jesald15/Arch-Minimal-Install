@@ -105,7 +105,7 @@ sudo sensors-detect
 3. **Clone this repository**
 
    ```bash
-   git clone https://github.com/yourname/arch-lite.git
+   git clone https://github.com/jesald15/Arch-lite.git
    cd arch-lite
    chmod +x install.sh
    ./install.sh
