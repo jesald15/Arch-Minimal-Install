@@ -35,12 +35,6 @@ Connect to your Wi‑Fi:
 iwctl --passphrase "YOUR_WIFI_PASSWORD" station wlan0 connect "YOUR_SSID"
 ```
 
-Exit `iwctl`:
-
-```bash
-exit
-```
-
 Verify internet connectivity:
 
 ```bash
@@ -56,7 +50,7 @@ Once internet is working, start the guided installer just type:
 ```bash
 archinstall
 ```
-
+**IMPORTANT: Install linux lts kernel too**
 ---
 
 # STEP 2 : i3wm
@@ -69,40 +63,10 @@ archinstall
    - Modifier key? → **Win / Mod4**
 
    This step **must be done before running the installer**.
+2. Connect to wifi using NetworkManager
+3. **Open a terminal** (super + enter)
 
-2. **Open a terminal** (kitty or another terminal)
-
-### Install all packages
-
-```bash
-sudo pacman -S --needed --noconfirm \
-i3 i3status \
-kitty dmenu dex \
-xss-lock i3lock \
-networkmanager nm-applet \
-brightnessctl playerctl lm_sensors \
-thunar xorg-xinput \
-blueman usbutils \
-firefox \
-wine wine-mono wine-gecko winetricks \
-telegram-desktop deltachat-desktop \
-neovim nano
-```
-
-Enable NetworkManager:
-
-```bash
-sudo systemctl enable --now NetworkManager
-```
-
-Detect sensors:
-
-```bash
-sudo sensors-detect
-```
-
-
-3. **Clone this repository**
+4. **Clone this repository**
 
    ```bash
    git clone https://github.com/jesald15/Arch-lite.git
@@ -111,8 +75,15 @@ sudo sensors-detect
    ./install.sh
    ```
 
-4. Restart the config files `Mod + Shift + C`
+5. Restart the config files `Mod + Shift + C`
 
+6. Install these packages (Remove things that you don't want)
+
+```
+sudo pacman -S obsidian flameshot firefox nemo neovim android-file-transfer mtpfs gvfs gvfs-mtp wine wine-mon wine-gecko winetricks telegram-desktop deltachat-desktop brightnessctl xorg-xinput
+```
+
+7. Reboot
 ---
 
 ##  Keyboard Shortcuts
@@ -121,20 +92,10 @@ All keyboard shortcuts are documented in: `i3_shortcuts.md`
 
 ---
 
-##  Fix: USB Not Detected
+## Updating arch 
+- Backup before upgrading
+- Avoid doing partial upgrades always use `pacman -Syu`
 
-If your USB appears in `lsusb` but not in the file manager, MTP support is missing.
-
-Install required packages:
-
-```bash
-sudo pacman -S android-file-transfer mtpfs gvfs gvfs-mtp
-```
-
-Reconnect your phone and enable **File Transfer (MTP)** mode.
-
----
-**It's good to have a fallback distro other than i3**
 
 ## ❤️ Support My Work
 
